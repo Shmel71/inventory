@@ -18,34 +18,34 @@ class FileController extends Controller
     {
         var_dump('test');
         $new_order = new Orders();
-        $new_order->number = 5;
-        $new_order->recipient = 'ded pafnori';
-        $new_order->sender = 'ebobo sklad';
-        $new_order->order_name = '№15';
-        $new_order->date = '2021-04-15';
+        $new_order->number = ;
+        $new_order->recipient = '';
+        $new_order->sender = '';
+        $new_order->order_name = '';
+        $new_order->date = '';
         $save_result = $new_order->save();
         if (!$save_result) {
             var_dump('order');
             var_dump($new_order->getErrors());
         }
         $new_product = new Product();
-        $new_product->product_name = 'Salo v shokolade';
-        $new_product->properties = 'Girnoe';
-        $new_product->weight = 47;
-        $new_product->number_of_meters = 999;
+        $new_product->product_name = '';
+        $new_product->properties = '';
+        $new_product->weight = ;
+        $new_product->number_of_meters = ;
         $save_result = $new_product->save();
         if (!$save_result) {
             var_dump('product');
             var_dump($new_product->getErrors());
         }
         $new_stock = new Stock();
-        $new_stock->product_name = 'salo jak salo';
-        $new_stock->properties = 'ochen girnoe';
-        $new_stock->weight = 123;
-        $new_stock->number_of_meters = 666;
-        $new_stock->balance = 13;
-        $new_stock->comment = 'jak pahnet';
-        $new_stock->date = '2021-12-15';
+        $new_stock->product_name = '';
+        $new_stock->properties = '';
+        $new_stock->weight = ;
+        $new_stock->number_of_meters = ;
+        $new_stock->balance = ;
+        $new_stock->comment = '';
+        $new_stock->date = '';
         $save_result = $new_stock->save();
         if (!$save_result) {
             var_dump('stock');
