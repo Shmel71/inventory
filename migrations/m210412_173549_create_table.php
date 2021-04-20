@@ -12,8 +12,8 @@ class m210412_173549_create_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('Stok', ['first_row' => $this->string(), 'second_row' => $this->integer()]);
-        $this->createTable('Orders', ['number' => $this->integer(),'date' => $this->date(), 'order_name' => $this->string(), 'sender' => $this->string(), 'recipient' => $this->string()]);
+        $this->createTable('Stock', ['product_number' => $this->string(), 'product_name' => $this->string(), 'unit_of_measure' => $this->string(), 'product_quantity' => $this->float()]);
+        $this->createTable('Orders', ['number' => $this->string(),'customer' => $this->string(), 'order_name' => $this->string(), 'edition' => $this->integer(), 'billing' => $this->string(), 'weight' => $this->float(), 'packed_material_order' => $this->string()]);
         $this->createTable('Product', ['product_name' => $this->string(), 'properties' => $this->string(), 'weight' => $this->integer(), 'number_of_meters' => $this->integer()]);
     }
 
@@ -22,7 +22,7 @@ class m210412_173549_create_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('Stok');
+        $this->dropTable('Stock');
         $this->dropTable('Orders');
         $this->dropTable('Product');
     }
